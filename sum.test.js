@@ -1,4 +1,9 @@
+const { beforeEach } = require('node:test');
 const {sum, name, str, fetchData, processData, promiseFn} = require('./sum.js');
+
+beforeEach(() => {
+    console.warn("This function is going to Run");
+})
 
 
 describe("Test cases for Sum Function", () => {
