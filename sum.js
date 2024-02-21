@@ -19,7 +19,11 @@ function processData(data){
     return data;
 };
 
-fetchData(processData)
+function promiseFn(){
+    return new Promise((resolve,reject) => {
+        resolve("Hello Muthu");
+    })
+}
 
 
-module.exports = { sum, name ,str, fetchData, processData};
+module.exports = { sum, name ,str, fetchData, processData, promiseFn};

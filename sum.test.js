@@ -1,4 +1,4 @@
-const {sum, name, str, fetchData, processData} = require('./sum.js');
+const {sum, name, str, fetchData, processData, promiseFn} = require('./sum.js');
 
 
 describe("Test cases for Sum Function", () => {
@@ -44,5 +44,15 @@ test("Callback function Checking", () => {
     expect(mockFn).toHaveBeenCalledWith("Hello World");
 });
 
+
+// Testing "Promise Function"
+
+test("Promise Function", () => {
+    expect(async() => {
+        const res = await promiseFn();
+        expect(res).toEqual("Hello Muthu")
+    }
+    )
+})
 
 
